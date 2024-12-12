@@ -1,4 +1,4 @@
-// scripts.js
+// scripts.js 
 function showDetails(service) {
     const details = document.getElementById("details");
     const content = document.getElementById("details-content");

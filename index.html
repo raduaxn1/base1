@@ -1,87 +1,68 @@
 <!DOCTYPE html>
-<html lang="ro">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Servicii profesionale de dezvoltare web, SEO și marketing digital pentru afaceri mici și mijlocii.">
-    <meta name="keywords" content="dezvoltare web, servicii SEO, hosting, marketing digital, branding">
-    <meta name="author" content="Numele Companiei">
-    <title>Numele Companiei - Servicii Web Profesionale</title>
+    <title>Web Design Startup</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1><a href="#">Numele Companiei</a></h1>
-            <nav>
-                <ul>
-                    <li><a href="#despre-noi">Despre Noi</a></li>
-                    <li><a href="/base1/servicii">Servicii</a></li> <!--Link pagina servicii, se face automat de server, GITHUB NU FACE -->
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
+    <!-- Transparent Header -->
+    <header class="transparent-header">
+        <h1>WebazatPro</h1>
+        <nav>
+            <a href="#services">Services</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
     </header>
 
-    <main>
-        <section id="hero">
-            <div class="container">
-                <h2>Transformăm ideile în soluții digitale de succes.</h2>
-                <p>Descoperă servicii personalizate pentru dezvoltare web, optimizare SEO și marketing digital.</p>
-                <a href="#contact" class="btn">Contactează-ne</a>
-            </div>
-        </section>
-
-        <section id="despre-noi">
-            <div class="container">
-                <h2>Despre Noi</h2>
-                <p>Misiunea noastră este să susținem creșterea afacerilor prin tehnologii moderne și strategii inovatoare.</p>
-            </div>
-        </section>
-
-        <section id="servicii">
-            <div class="container">
-                <h2>Serviciile Noastre</h2>
-                <div class="services-grid">
-                    <div class="card" onclick="showDetails('web-dev')">
-                        <h3>Dezvoltare Site-uri Web</h3>
-                        <p>Site-uri personalizate pentru orice tip de afacere.</p>
-                    </div>
-                    <div class="card" onclick="showDetails('seo')">
-                        <h3>SEO</h3>
-                        <p>Strategii avansate pentru creșterea vizibilității online.</p>
-                    </div>
-                    <div class="card" onclick="showDetails('hosting')">
-                        <h3>Hosting</h3>
-                        <p>Servicii rapide și fiabile pentru găzduirea site-urilor.</p>
-                    </div>
-                    <div class="card" onclick="showDetails('branding')">
-                        <h3>Branding și Design</h3>
-                        <p>Identitate vizuală de impact pentru afacerea ta.</p>
-                    </div>
-                </div>
-                <div id="details" class="details hidden">
-                    <button onclick="hideDetails()" class="close-btn">&times;</button>
-                    <div id="details-content"></div>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact">
-            <div class="container">
-                <h2>Contact</h2>
-                <p>Scrie-ne pentru a afla cum îți putem transforma afacerea.</p>
-                <a href="mailto:contact@companie.ro" class="btn">Scrie-ne</a>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Numele Companiei. Toate drepturile rezervate.</p>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-artwork">
+            <div class="gradient-overlay"></div>
         </div>
-    </footer>
+        <div class="hero-content">
+            <h2>We Build Stunning Websites & Boost Your Online Presence</h2>
+            <p>Your one-stop solution for websites, SEO, SEM, hosting, and social media management.</p>
+            <a href="#contact" class="cta">Get Started</a>
+        </div>
+    </section>
 
-    <script src="scripts.js"></script>
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="section-header">
+            <h3>Our Services</h3>
+            <p>Explore our wide range of offerings designed to elevate your business online.</p>
+        </div>
+        <div class="service-cards">
+            <div class="card">
+                <h4>Website Design</h4>
+                <p>We craft visually appealing, fast, and user-friendly websites tailored to your needs.</p>
+            </div>
+            <div class="card">
+                <h4>SEO</h4>
+                <p>Optimize your site to rank higher in search engines and attract organic traffic.</p>
+            </div>
+            <div class="card">
+                <h4>SEM</h4>
+                <p>Launch targeted marketing campaigns to drive customer engagement and leads.</p>
+            </div>
+            <div class="card">
+                <h4>Hosting</h4>
+                <p>Reliable and secure hosting solutions that keep your website online 24/7.</p>
+            </div>
+            <div class="card">
+                <h4>Social Media Management</h4>
+                <p>Grow your brand's presence on social platforms with tailored strategies.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 WebDesignPro. All rights reserved. <a href="#contact">Contact us</a>.</p>
+    </footer>
 </body>
 </html>

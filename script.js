@@ -56,3 +56,19 @@ function reserveSpaceForText() {
 // Initializăm animatia
 reserveSpaceForText();
 
+
+const navLinks = document.getElementById("navLinks");
+const hamburgerMenu = document.getElementById("hamburger-menu");
+const closeMenuIcon = document.querySelector(".fa-times");
+
+function showMenu() {
+    navLinks.classList.add("show"); // Adaugă clasa pentru a afișa meniul
+}
+
+function hideMenu() {
+    navLinks.classList.remove("show"); // Elimină clasa pentru a ascunde meniul
+}
+
+hamburgerMenu.addEventListener("click", showMenu);
+closeMenuIcon.addEventListener("click", hideMenu);
+

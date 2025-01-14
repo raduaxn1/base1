@@ -2,8 +2,14 @@
 /*responsivitate mobile navbar*/
 
 @media (max-width: 768px) {
-    .text-box h1 {
-        font-size: 40px;
+  .text-box h1  {
+        display: block;
+        text-align: center;
+        font-size: 35px;
+    }
+    
+    .text-box p {
+        font-size: 15px;
     }
 
     .nav-links.show {

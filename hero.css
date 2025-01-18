@@ -1,0 +1,129 @@
+.header {
+    width: 100%;
+    height: 100vh;
+    background-image: radial-gradient(farthest-corner at 40px 40px,rgb(0, 0, 0) 0%,rgb(14, 8, 79) 100%);
+    /*background-image: radial-gradient(farthest-corner at 40px 40px,rgb(0, 0, 0) 0%,rgb(6, 4, 35) 100%);*/
+    position: relative; 
+    overflow: hidden; /* Asigură-te că nimic nu depășește limitele secțiunii */
+    z-index: 0;
+}
+
+
+
+.text-box {
+    width: 90%;
+    display: inline-block;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    transition: opacity 0.5s ease, transform 2.5s ease;
+}
+
+.text-box.hidden{
+    opacity: 0; 
+    transition: visibility 0s 2s, opacity 0.5s linear;
+    transform: translate(-50%, -50%);
+    pointer-events: none; 
+}
+
+.text-box h1 {
+    font-size: 62px; /* Dimensiunea textului */
+    line-height: 1.4; /* Spațiere între linii */
+    white-space: inherit; /* Menține textul pe un singur rând */
+    /*overflow: hidden; /* Ascunde textul în exces */
+    overflow-wrap: normal;
+    font-family: monospace;
+    visibility: visible; /* Ascunde complet textul inițial */
+    position: relative; /* Necesită pentru poziționare */
+    margin: 0 auto; /* Asigură centrare */
+}
+
+.text-tr {
+    display: inline-block;
+    overflow: hidden;
+    white-space: pre-wrap; /* Permite împărțirea pe linii multiple */
+    font-size: 2em;
+    filter: blur(10px);
+    opacity: 0;
+    transition: filter 4.5s ease, opacity 0.5s ease;
+    width: 100%; /* Ocupă întreaga lățime disponibilă */
+    text-align: left; /* Aliniere la stânga */
+    visibility: hidden; /* Ascunde până la începutul animației */
+}
+
+.typing-active {
+    filter: blur(0);
+    opacity: 1;
+    visibility: visible; /* Face textul vizibil */
+}
+
+.text-box {
+    text-align: center; /* alinierea generală */
+    z-index: 3;
+}
+
+.txt {
+    margin-top: 20px; /* Spațiu între h1 și paragraful <p> */
+}
+
+.text-box p {
+    margin: 10px 0 40px;
+    font-size: 20px;
+    color: #fff;
+    padding: 40px;
+}
+
+
+
+.hero-btn {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff; 
+    border: 1px solid #fff;
+    border-radius: 15px; 
+    padding: 12px 34px ;
+    font-size: 13px ;
+    background: #5454e718 ;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    position: relative ;
+    cursor: pointer ;
+    transition: 0.3s ease ;
+    z-index: 4;
+}
+
+.hero-btn:hover {
+    border: 1px solid #ffffff ;
+    /*background: #9154e718 ;*/
+    background: rgba(255, 252, 252, 0.164) ;
+    color: #fff ;
+}
+
+.svg-sec{
+    z-index: 0;
+}
+
+/* Poziționăm containerul SVG în partea de jos a secțiunii */
+.svg-container {
+    position: absolute;
+    bottom: 0; /* Poziționează SVG-ul în partea de jos a secțiunii header */
+    left: 0;
+    width: 100%;
+    height: 500px; /* Ajustează înălțimea în funcție de nevoi */
+   /* z-index: 1; /* Asigură că SVG-ul nu se suprapune cu conținutul din secțiunea header */
+}
+
+.svg-container {
+   
+    overflow: hidden;
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Tranziție pentru efect lin */
+}
+
+.svg-container.hidden {
+    opacity: 0; /* Face SVG-ul invizibil */
+    transform: translateY(-20px); /* Îl mișcă ușor în sus */
+    pointer-events: none; /* Previne interacțiunile */
+}

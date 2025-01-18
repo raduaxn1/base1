@@ -79,35 +79,3 @@
     color: #fff;
 }
 
-/* Ajustări pentru dispozitive mobile */
-@media (max-width: 768px) {
-    .descriere {
-        padding: 15px 10px; /* Padding redus */
-    }
-
-    .descriere-title {
-        font-size: 24px; /* Dimensiune ajustată pentru titlu */
-        margin-bottom: 100px; /* Spațiu mai mic sub titlu */
-    }
-
-    .col-container {
-        grid-template-columns: 1fr; /* O singură coloană */
-        gap: 30px; /* Spațiu între carduri */
-    }
-
-    .card {
-        padding: 30px 20px; /* Padding mai compact */
-        max-height: 100%; /* Elimină limitarea înălțimii */
-        width: 90%; /* Face cardurile mai înguste */
-        margin: 0 auto; /* Centrează cardurile */
-    }
-
-    .col h2 {
-        font-size: 1.5rem; /* Font mai mic pentru titluri */
-    }
-
-    .col ul li {
-        font-size: 1rem; /* Text mai mic */
-        line-height: 1.5; /* Reduce înălțimea liniei */
-    }
-}

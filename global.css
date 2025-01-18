@@ -1,0 +1,343 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+}
+body{
+    color: #000;
+}
+
+.sec-contact, .sec-footer {
+    position: relative;
+    z-index: 1;
+}
+
+.sec-footer {
+    margin-top: 0;
+}
+
+.sec-contact {
+    background-color: #f5f5f5; /* Sau culoarea dorită */
+}
+
+.sec-footer {
+    background-color: #333; /* Sau culoarea dorită */
+}
+
+
+.sec-contact {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sec-footer {
+    min-height: 0vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .cont-form, .footer-container {
+        padding: 20px;
+    }
+
+    .cutiile {
+        flex-direction: column;
+    }
+
+    .info-box, .contact-box {
+        margin-bottom: 20px;
+        width: 100%;
+    }
+
+    .sec-footer{
+        min-height: 50vh;
+    }
+}
+
+
+
+
+/*  Mod luminos  */
+
+/* Stil pentru butonul de schimbare a modului *
+.mode-toggle {
+    position: fixed;
+    top: 65px;
+    right: 50px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #9154e718;
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    z-index: 1000;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}/*
+
+.mode-toggle:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: rgb(60, 58, 58);
+}
+
+body.light-mode .mode-toggle:hover {
+    background-color: rgba(72, 71, 71, 0.653);
+    color: white;
+}
+
+/* Mod luminos */
+body.light-mode {
+    background-color: #f9f9f9;
+    color: #000;
+}
+
+/*body.light-mode .header {
+    background-image: radial-gradient(farthest-corner at 40px 40px, #ffffff 0%, #858484 100%);
+}*/
+
+body.light-mode .header{
+    /*background: linear-gradient(217deg, #8f9def7a, #dcdbdb 100%),
+                linear-gradient(127deg, #858484, #858484 70.71%),
+                linear-gradient(336deg, #858484, #858484 70.71%);*/
+    background-image: linear-gradient(to left bottom, #919be5, #cfd0f9, #cfd0f9, #cfd0f9, #faf6ff);
+}
+
+body.light-mode .nav-links ul li a:hover {
+    color: #19181ab7;
+}
+
+
+body.light-mode .nav a img{
+    background-color: #000;
+}
+
+body.light-mode .text-box h1 {
+    color: #000;
+}
+
+body.light-mode .hero-btn {
+    color: #000;
+    border: 1px solid #000;
+    background: rgba(0, 0, 0, 0);
+}
+
+body.light-mode .hero-btn:hover {
+    background: #bb54e735;
+    backdrop-filter: blur(10px);
+}
+
+/*body.light-mode .servicii {
+    background: linear-gradient(217deg, #858484, #dcdbdb 100%),
+                linear-gradient(127deg, #858484, #858484 70.71%),
+                linear-gradient(336deg, #858484, #858484 70.71%);
+}*/
+
+body.light-mode .servicii {
+    background-image: linear-gradient(to bottom, #d0d3f8, #c6c3f7, #cdc3fa, #e1d5f5, #c0c7f9);
+}
+
+body.light-mode .servicii-col {
+    background-color: #f9f9f900;
+    color: #333;
+    border: 2px solid rgb(2, 2, 2);
+}
+
+body.light-mode .servicii-col:hover {
+    background: #d48af42c;
+    border:solid #bb54e731;
+    color: #000;
+}
+
+body.light-mode .servicii-col h3{
+    color: #000;
+
+}
+
+body.light-mode .servicii-col p{
+    color: #000;
+}
+
+body.light-mode .text-box p {
+    color: #000;
+
+}
+
+body.light-mode .servicii-frm h1{
+    color: #000;
+}
+
+
+/*-------------------*/
+
+/* Stiluri generale pentru nav-bar *
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8); /* Implicit întunecat *
+    color: #fff;
+    padding: 10px 20px;
+    position: relative;
+    z-index: 10;
+}*/
+
+
+
+/* Luminos */
+
+
+/* Butonul întrerupător */
+.mode-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 60px;
+    height: 30px;
+    background: #5454e718;
+    border: 1px solid #fff;
+    border-radius: 15px;
+    cursor: pointer;
+    position: absolute;
+    top: 4px;
+    right: -68px;
+    z-index: 20;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.mode-toggle::before {
+    content: '';
+    width: 25px;
+    height: 25px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    transform: translateY(-50%);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+body.light-mode .mode-toggle {
+    background: #ccc;
+    border-color: #000;
+}
+
+body.light-mode .mode-toggle::before {
+    background-color: rgb(0, 0, 0);
+    transform: translate(35px, -50%);
+}
+
+/* Poziționare pe mobil */
+@media (max-width: 768px) {
+    .mode-toggle {
+        top: 10px;
+        left: 10px; /* Colțul stânga-sus */
+        right: auto;
+    }
+}
+
+
+/*Svg mod luminos*/
+
+body.light-mode .svg-container #gradient_1 stop[offset="0"] {
+    stop-color: #b666d8ec; /* Portocaliu */
+}
+
+body.light-mode .svg-container #gradient_1 stop[offset="1"] {
+    stop-color: #bb54e7e9; /* Portocaliu intens */
+}
+
+body.light-mode .svg-container #gradient_2 stop[offset="0"] {
+    stop-color: #8f28bbf3; /* Portocaliu intens */
+}
+
+body.light-mode .svg-container #gradient_2 stop[offset="1"] {
+    stop-color: #d28fefee; /* Portocaliu */
+}
+
+
+/*Contact form mod luminos*/
+
+body.light-mode .cont-form{
+    background-image: linear-gradient(to bottom, #c0c7f9, #c6c3f7, #cdc3fa, #ddccf9, #ead6fa);
+}
+
+body.light-mode .cont-form h1{
+    color: rgba(0, 0, 0, 0.687);
+}
+
+body.light-mode .cont-form input::placeholder{
+    color: rgb(74, 70, 70);
+}
+
+body.light-mode .cont-form h4{
+    color: rgb(74, 70, 70);
+}
+
+body.light-mode .cont-form form{
+    background: rgba(23, 23, 23, 0.1);
+}
+
+body.light-mode .info-box{
+    background: rgba(23, 23, 23, 0.1);
+}
+
+body.light-mode .cont-form form textarea{
+    background: rgba(255, 255, 255, 0.68);
+    color: #000;
+}
+
+body.light-mode .cont-form #button{
+    background: rgba(0, 0, 0, 0.38);
+    color: #fff;
+}
+body.light-mode .cont-form #button:hover{
+    background: #000;
+}
+
+
+/*info-box light mode*/
+
+body.light-mode .info-box input, .info-box textarea {
+    background: rgba(255, 255, 255, 0);
+    color: #524747;
+    cursor: default;
+    }
+body.light-mode .info-box textarea[readonly] {
+    background: rgba(255, 255, 255, 0);
+    color: #131313;
+    cursor: default;
+    }
+
+
+
+
+/*Mod luminos prezentare*/
+
+body.light-mode .descriere{
+    background-image: linear-gradient(to bottom, #d0d3f8, #c6c3f7, #cdc3fa, #e1d5f5, #d0d3f8);
+}
+
+body.light-mode .col h2{
+    color: #000;
+}
+
+body.light-mode .col ul li{
+    color: #000;
+}
+
+body.light-mode .col ul li strong{
+    color: rgb(57, 45, 45);
+}
+
+
+body.light-mode .descriere-title{
+    color: #000;
+}
+body.light-mode .section-title{
+    color: #000;
+}

@@ -1,0 +1,100 @@
+.servicii {
+    background-image: linear-gradient(to bottom, #1f064e, #100843, #170b46, #0d064e, #1f064e);
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    padding: 10px 30px 50px;
+}
+
+.servicii-frm h1 {
+    color: #fff;
+    font-size: 36px;
+    letter-spacing: 0.2rem;
+    margin-top: 50px;
+    margin-bottom: 150px;
+    text-transform: uppercase;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 coloane */
+    grid-template-rows: repeat(2, auto); /* 2 rânduri */
+    gap: 40px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    margin-left: 120px;
+    margin-right: 120px;
+}
+
+/* Poziționare carduri */
+.card1 {
+    grid-column: 1; /* Coloana 1 */
+    grid-row: span 2; /* Ocupă 2 rânduri */
+}
+
+.card2 {
+    grid-column: 2; /* Coloana 2 */
+    grid-row: 1; /* Rândul 1 */
+}
+
+.card4 {
+    grid-column: 2; /* Coloana 2 */
+    grid-row: 2; /* Rândul 2 */
+}
+
+.card3 {
+    grid-column: 3; /* Coloana 3 */
+    grid-row: 1; /* Rândul 1 */
+}
+
+.card5 {
+    grid-column: 3; /* Coloana 3 */
+    grid-row: 2; /* Rândul 2 */
+}
+
+/* Stilizarea cardurilor */
+.servicii-col {
+    background: rgba(225, 225, 225, 0.1);
+    color: #f9f9f9;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    transition: transform 0.3s ease, background 0.3s ease, border-color 0.3s ease;
+    backdrop-filter: blur(10px);
+    height: 100%;
+    box-shadow: 0 20px 55px rgba(0, 0, 0, 0.3);
+}
+
+.servicii-col:hover {
+    transform: scale(1.05);
+    border: 1px solid #fff;
+    background: rgba(145, 84, 231, 0.15);
+}
+
+.servicii-col h3 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.servicii-col p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #d0d0d0;
+    margin-bottom: 20px;
+}
+
+
+
+/* Responsivitate */
+@media (max-width: 768px) {
+    .row {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+}
+
